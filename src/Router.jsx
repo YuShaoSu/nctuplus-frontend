@@ -16,6 +16,7 @@ import * as PastExams from 'pages/PastExams'
 import * as Books from 'pages/Books'
 import * as Events from 'pages/Events'
 import CourseMap from 'pages/CourseMap'
+import CampusMap from 'pages/CampusMap'
 import { UserNavigation } from 'components/User'
 import * as User from 'pages/User'
 import * as Scores from 'pages/Scores'
@@ -86,6 +87,9 @@ const Router = enhance(({ currentUser }) => {
         <Route exact path='/admin/course_maps' component={adminOnly(Admin.CourseMaps.Index)} />
         <Route path='/admin/course_maps/new' component={adminOnly(Admin.CourseMaps.New)} />
         <Route path='/admin/course_maps/:id/edit' component={adminOnly(Admin.CourseMaps.Edit)} />
+
+        {/* campus_map route group */}
+        <Route exact path='/campus_maps' component={CampusMap} />
 
         {/* course route group */}
         <Route exact path='/courses' component={Courses.Index} />
